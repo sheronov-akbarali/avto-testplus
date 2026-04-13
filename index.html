@@ -1,0 +1,574 @@
+<!doctype html>
+<html lang="en" data-theme="light">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AvtoTest Plus – Haydovchilik imtihoni</title>
+    <meta
+      name="description"
+      content="Haydovchilik imtihoniga tayyorlanish uchun eng yaxshi ilova"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+    <link rel="icon" type="image/png" href="./public/img/favicon1.png" />
+  </head>
+  <body>
+
+    <!-- ==================== LOADER ==================== -->
+    <div id="loader" class="loader">
+      <div class="loader-inner">
+        <div class="loader-logo">
+          <img src="./public/img/fav.png" alt="AvtoTest Plus" class="loader-logo-img" />
+        </div>
+        <div class="loader-text">AvtoTest <span>Plus</span></div>
+        <div class="loader-bar"><div class="loader-fill"></div></div>
+      </div>
+    </div>
+
+    <!-- ==================== SECTION NAV DOTS ==================== -->
+    <nav class="section-nav" id="sectionNav" aria-label="Section navigation">
+      <div class="section-nav-track">
+        <button class="snav-dot active" data-target="hero" aria-label="Hero">
+          <span class="snav-tooltip">Bosh sahifa</span>
+        </button>
+        <button class="snav-dot" data-target="features" aria-label="Features">
+          <span class="snav-tooltip">Xususiyatlar</span>
+        </button>
+        <button class="snav-dot" data-target="screenshots" aria-label="Screenshots">
+          <span class="snav-tooltip">Galereya</span>
+        </button>
+        <button class="snav-dot" data-target="how-it-works" aria-label="How it works">
+          <span class="snav-tooltip">Qanday ishlaydi</span>
+        </button>
+        <button class="snav-dot" data-target="about" aria-label="About">
+          <span class="snav-tooltip">Dasturchi</span>
+        </button>
+        <button class="snav-dot" data-target="download" aria-label="Download">
+          <span class="snav-tooltip">Yuklab olish</span>
+        </button>
+      </div>
+    </nav>
+
+    <!-- ==================== NAVBAR ==================== -->
+    <header class="navbar" id="navbar">
+      <div class="container nav-container">
+        <a href="#hero" class="nav-logo">
+          <span class="logo-icon">
+            <img src="./public/img/fav.png" alt="AvtoTest Plus Logo" class="logo-img" />
+          </span>
+          <span class="logo-text">AvtoTest <span>Plus</span></span>
+        </a>
+
+        <nav class="nav-links" id="navLinks">
+          <a href="#features" data-i18n="nav_features">Xususiyatlar</a>
+          <a href="#screenshots" data-i18n="nav_screenshots">Galereya</a>
+          <a href="#how-it-works" data-i18n="nav_how">Qanday ishlaydi</a>
+          <a href="#about" data-i18n="nav_about">Dasturchi</a>
+          <a href="#download" class="nav-cta" data-i18n="nav_download">Yuklab olish</a>
+        </nav>
+
+        <div class="nav-actions">
+          <!-- Language Switcher -->
+          <div class="lang-switcher" id="langSwitcher">
+            <button class="lang-btn" id="langBtn" aria-label="Language">
+              <i class="fa-solid fa-globe"></i>
+              <span id="currentLang">UZ</span>
+              <i class="fa-solid fa-chevron-down chevron-icon"></i>
+            </button>
+            <div class="lang-dropdown" id="langDropdown">
+              <button class="lang-option active" data-lang="uz">
+                <span class="lang-flag">🇺🇿</span> O'zbek (Lotin)
+              </button>
+              <button class="lang-option" data-lang="uz_cyrl">
+                <span class="lang-flag">🇺🇿</span> Ўзбек (Кирил)
+              </button>
+              <button class="lang-option" data-lang="ru">
+                <span class="lang-flag">🇷🇺</span> Русский
+              </button>
+            </div>
+          </div>
+
+          <!-- Dark Mode Toggle -->
+          <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode">
+            <i class="fa-solid fa-moon" id="themeIcon"></i>
+          </button>
+
+          <!-- Hamburger -->
+          <button class="hamburger" id="hamburger" aria-label="Menu">
+            <span></span><span></span><span></span>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <!-- ==================== HERO ==================== -->
+    <section class="hero" id="hero">
+      <div class="hero-bg-mesh"></div>
+      <div class="hero-grid-pattern"></div>
+      <div class="container hero-container">
+
+        <div class="hero-content reveal">
+          <h1 class="hero-title" data-i18n="hero_title">
+            AvtoTest <span>Plus</span>
+          </h1>
+          <p class="hero-subtitle" data-i18n="hero_subtitle">
+            Haydovchilik imtihoniga tayyorlanish uchun eng yaxshi ilova
+          </p>
+          <p class="hero-desc" data-i18n="hero_desc">
+            Rasmiy o'quv dasturi asosida, bepul va offline rejimda ishlaydi. Har
+            bir savolga batafsil izoh berilgan.
+          </p>
+          <div class="hero-actions">
+            <a href="#download" class="btn-primary">
+              <i class="fa-brands fa-google-play"></i>
+              <span>
+                <small data-i18n="btn_get">Olish</small>
+                <strong>Google Play</strong>
+              </span>
+            </a>
+            <a href="#features" class="btn-outline">
+              <span data-i18n="btn_learn">Ko'proq bilish</span>
+              <i class="fa-solid fa-arrow-right"></i>
+            </a>
+          </div>
+          <div class="hero-stats">
+            <div class="stat">
+              <strong>100+</strong>
+              <span data-i18n="stat_users">Foydalanuvchi</span>
+            </div>
+            <div class="stat-divider"></div>
+            <div class="stat">
+              <strong>1000+</strong>
+              <span data-i18n="stat_questions">Savol</span>
+            </div>
+            <div class="stat-divider"></div>
+            <div class="stat">
+              <strong>4.8⭐</strong>
+              <span data-i18n="stat_rating">Reyting</span>
+            </div>
+          </div>
+        </div>
+
+        <!--
+          =====================================================
+          HERO MOCKUP — React mount qilish nuqtasi.
+          src/main.jsx bu .hero-mockup divini topib,
+          HeroMockup komponentini ichiga render qiladi.
+          .reveal klassi saqlanadi — script.js ishlayveradi.
+          =====================================================
+        -->
+        <div class="hero-mockup reveal" id="hero-mockup-root"></div>
+
+      </div>
+
+      <div class="hero-wave">
+        <svg viewBox="0 0 1440 80" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
+          <path d="M0,40 C360,80 1080,0 1440,40 L1440,80 L0,80 Z" fill="var(--bg-section)" />
+        </svg>
+      </div>
+    </section>
+
+    <!-- ==================== FEATURES ==================== -->
+    <section class="features bg-section" id="features">
+      <div class="container">
+        <div class="section-header reveal">
+          <div class="section-tag" data-i18n="features_tag">Xususiyatlar</div>
+          <h2 data-i18n="features_title">Nima uchun AvtoTest Plus?</h2>
+          <p data-i18n="features_subtitle">Imtihonga tayyorlanishning eng samarali usuli</p>
+        </div>
+        <div class="features-grid">
+          <div class="feature-card reveal">
+            <div class="feature-icon-wrap green">
+              <i class="fa-solid fa-list-check"></i>
+            </div>
+            <h3 data-i18n="feat1_title">Mavzular bo'yicha testlar</h3>
+            <p data-i18n="feat1_desc">
+              Har bir mavzu bo'yicha alohida testlar. Zaif tomonlaringizni aniqlang va mustahkamlang.
+            </p>
+          </div>
+          <div class="feature-card reveal">
+            <div class="feature-icon-wrap blue">
+              <i class="fa-solid fa-book-open"></i>
+            </div>
+            <h3 data-i18n="feat2_title">Rasmiy o'quv dasturi</h3>
+            <p data-i18n="feat2_desc">
+              O'zbekiston YHQ rasmiy o'quv dasturiga asoslangan savollar va javoblar.
+            </p>
+          </div>
+          <div class="feature-card reveal">
+            <div class="feature-icon-wrap purple">
+              <i class="fa-solid fa-chart-line"></i>
+            </div>
+            <h3 data-i18n="feat3_title">Statistik tahlil</h3>
+            <p data-i18n="feat3_desc">
+              Har bir test natijangizni kuzating. Grafik ko'rinishda taraqqiyotingizni ko'ring.
+            </p>
+          </div>
+          <div class="feature-card reveal">
+            <div class="feature-icon-wrap orange">
+              <i class="fa-solid fa-comment-dots"></i>
+            </div>
+            <h3 data-i18n="feat4_title">Har bir javobga izoh</h3>
+            <p data-i18n="feat4_desc">
+              Noto'g'ri javob berganingizda tushuntirish beriladi. Xatolardan o'rganasiz.
+            </p>
+          </div>
+          <div class="feature-card reveal">
+            <div class="feature-icon-wrap red">
+              <i class="fa-solid fa-stopwatch"></i>
+            </div>
+            <h3 data-i18n="feat5_title">Haqiqiy imtihonga yaqin</h3>
+            <p data-i18n="feat5_desc">
+              Timer, tasodifiy savollar – haqiqiy imtihon sharoitini his eting.
+            </p>
+          </div>
+          <div class="feature-card reveal">
+            <div class="feature-icon-wrap teal">
+              <i class="fa-solid fa-plane-slash"></i>
+            </div>
+            <h3 data-i18n="feat6_title">Offline rejim</h3>
+            <p data-i18n="feat6_desc">
+              Internet bo'lmasa ham ishlaydi. Istalgan joyda o'qing.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== SCREENSHOTS (GALLERY) ==================== -->
+    <section class="screenshots" id="screenshots">
+      <div class="container">
+        <div class="section-header reveal">
+          <div class="section-tag" data-i18n="screenshots_tag">Galereya</div>
+          <h2 data-i18n="screenshots_title">Ilova ko'rinishi</h2>
+          <p data-i18n="screenshots_subtitle">Qulay va zamonaviy interfeys</p>
+        </div>
+      </div>
+
+      <!-- Desktop slider -->
+      <div class="slider-wrapper desktop-slider">
+        <div class="slider-viewport">
+          <div class="slider-track" id="sliderTrack">
+            <div class="screenshot-item active" data-label-key="screenshots_home">
+              <div class="screenshot-frame">
+                <img src="./public/img/home.png" alt="Bosh sahifa" class="ss-real-img" />
+              </div>
+              <div class="screenshot-label" data-i18n="screenshots_home">Bosh sahifa</div>
+            </div>
+            <div class="screenshot-item" data-label-key="screenshots_test">
+              <div class="screenshot-frame">
+                <img src="./public/img/imtixon-jar.png" alt="Test jarayoni" class="ss-real-img" />
+              </div>
+              <div class="screenshot-label" data-i18n="screenshots_test">Test jarayoni</div>
+            </div>
+            <div class="screenshot-item" data-label-key="screenshots_results">
+              <div class="screenshot-frame">
+                <img src="./public/img/har-bir-statistika.png" alt="Natija sahifasi" class="ss-real-img" />
+              </div>
+              <div class="screenshot-label" data-i18n="screenshots_results">Natija sahifasi</div>
+            </div>
+            <div class="screenshot-item" data-label-key="screenshots_stats">
+              <div class="screenshot-frame">
+                <img src="./public/img/statistika.png" alt="Statistika" class="ss-real-img" />
+              </div>
+              <div class="screenshot-label" data-i18n="screenshots_stats">Statistika</div>
+            </div>
+            <div class="screenshot-item" data-label-key="screenshots_search">
+              <div class="screenshot-frame">
+                <img src="./public/img/search.png" alt="Qidiruv" class="ss-real-img" />
+              </div>
+              <div class="screenshot-label" data-i18n="screenshots_search">Qidiruv</div>
+            </div>
+          </div>
+        </div>
+        <div class="slider-controls-row">
+          <button class="slider-arrow prev" id="prevBtn" aria-label="Previous">
+            <i class="fa-solid fa-chevron-left"></i>
+          </button>
+          <div class="slider-dots" id="sliderDots"></div>
+          <button class="slider-arrow next" id="nextBtn" aria-label="Next">
+            <i class="fa-solid fa-chevron-right"></i>
+          </button>
+        </div>
+      </div>
+
+      <!-- Mobile Gallery -->
+      <div class="mobile-gallery" id="mobileGallery">
+        <div class="mobile-gallery-scroll" id="mobileGalleryScroll">
+          <div class="mg-item" data-index="0">
+            <div class="mg-screen mg-img-screen">
+              <img src="./public/img/home.png" alt="Bosh sahifa" class="mg-real-img" />
+            </div>
+            <div class="mg-label" data-i18n="screenshots_home">Bosh sahifa</div>
+          </div>
+          <div class="mg-item" data-index="1">
+            <div class="mg-screen mg-img-screen">
+              <img src="./public/img/imtixon-jar.png" alt="Test jarayoni" class="mg-real-img" />
+            </div>
+            <div class="mg-label" data-i18n="screenshots_test">Test jarayoni</div>
+          </div>
+          <div class="mg-item" data-index="2">
+            <div class="mg-screen mg-img-screen">
+              <img src="./public/img/har-bir-statistika.png" alt="Natija sahifasi" class="mg-real-img" />
+            </div>
+            <div class="mg-label" data-i18n="screenshots_results">Natija sahifasi</div>
+          </div>
+          <div class="mg-item" data-index="3">
+            <div class="mg-screen mg-img-screen">
+              <img src="./public/img/statistika.png" alt="Statistika" class="mg-real-img" />
+            </div>
+            <div class="mg-label" data-i18n="screenshots_stats">Statistika</div>
+          </div>
+          <div class="mg-item" data-index="4">
+            <div class="mg-screen mg-img-screen">
+              <img src="./public/img/search.png" alt="Qidiruv" class="mg-real-img" />
+            </div>
+            <div class="mg-label" data-i18n="screenshots_search">Qidiruv</div>
+          </div>
+        </div>
+        <div class="mg-indicator" id="mgIndicator">
+          <button class="mg-dot active" data-idx="0"></button>
+          <button class="mg-dot" data-idx="1"></button>
+          <button class="mg-dot" data-idx="2"></button>
+          <button class="mg-dot" data-idx="3"></button>
+          <button class="mg-dot" data-idx="4"></button>
+        </div>
+        <div class="mg-active-label" id="mgActiveLabel">Bosh sahifa</div>
+      </div>
+    </section>
+
+    <!-- ==================== HOW IT WORKS ==================== -->
+    <section class="how-it-works bg-section" id="how-it-works">
+      <div class="container">
+        <div class="section-header reveal">
+          <div class="section-tag" data-i18n="how_tag">Qo'llanma</div>
+          <h2 data-i18n="how_title">Qanday ishlaydi?</h2>
+          <p data-i18n="how_subtitle">3 oddiy qadamda imtihonga tayyorlanishni boshlang</p>
+        </div>
+        <div class="steps-container">
+          <div class="steps-line"></div>
+          <div class="step reveal">
+            <div class="step-icon-wrap">
+              <i class="fa-brands fa-google-play"></i>
+              <div class="step-num">01</div>
+            </div>
+            <div class="step-content">
+              <h3 data-i18n="step1_title">Ilovani yuklab oling</h3>
+              <p data-i18n="step1_desc">
+                Google Play'dan AvtoTest Plus ilovasini bepul yuklab oling va o'rnating.
+              </p>
+            </div>
+          </div>
+          <div class="step reveal">
+            <div class="step-icon-wrap">
+              <i class="fa-solid fa-pen-to-square"></i>
+              <div class="step-num">02</div>
+            </div>
+            <div class="step-content">
+              <h3 data-i18n="step2_title">Testlarni ishlang</h3>
+              <p data-i18n="step2_desc">
+                Mavzular bo'yicha yoki umumiy test rejimini tanlang va savollarga javob bering.
+              </p>
+            </div>
+          </div>
+          <div class="step reveal">
+            <div class="step-icon-wrap">
+              <i class="fa-solid fa-chart-line"></i>
+              <div class="step-num">03</div>
+            </div>
+            <div class="step-content">
+              <h3 data-i18n="step3_title">Natijangizni kuzating</h3>
+              <p data-i18n="step3_desc">
+                Har kunlik natijalaringizni ko'ring, zaif tomonlaringizni mustahkamlang.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== ABOUT ==================== -->
+    <section class="about" id="about">
+      <div class="container">
+        <div class="section-header reveal">
+          <div class="section-tag" data-i18n="about_tag">Dasturchi</div>
+          <h2 data-i18n="about_title">Kimlar tomonidan yaratilgan?</h2>
+        </div>
+        <div class="about-card reveal">
+          <div class="about-left">
+            <div class="avatar-wrap">
+              <div class="avatar-circle">
+                <i class="fa-solid fa-user-tie"></i>
+              </div>
+              <div class="avatar-badge"><i class="fa-solid fa-code"></i></div>
+            </div>
+            <div class="dev-tags">
+              <span class="tag">Android</span>
+              <span class="tag">Flutter</span>
+              <span class="tag">Google Play</span>
+            </div>
+          </div>
+          <div class="about-right">
+            <h3 class="dev-name">Azizjon Sheronov</h3>
+            <div class="dev-title" data-i18n="dev_title">Android Developer &amp; Flutter Developer</div>
+            <p class="dev-bio" data-i18n="dev_bio">
+              3 yillik tajribaga ega Android dasturchisi. Bir nechta ilovalar
+              yaratgan va Google Play'da 100+ yuklab olishga erishgan. AvtoTest
+              Plus o'zbek haydovchilikga tayorlanayotganlar uchun maxsus yaratilgan.
+            </p>
+            <div class="dev-contacts">
+              <a href="mailto:azizjonsheronov@gmail.com" class="contact-link">
+                <i class="fa-solid fa-envelope"></i>
+                <span>azizjonsheronov@gmail.com</span>
+              </a>
+              <a href="https://github.com/azizjon7205" class="contact-link" target="_blank" rel="noopener">
+                <i class="fa-brands fa-github"></i>
+                <span>GitHub</span>
+              </a>
+            </div>
+            <a href="https://t.me/azizjon_sheronov" class="btn-primary dev-contact-btn" target="_blank" rel="noopener">
+              <i class="fa-brands fa-telegram"></i>
+              <span data-i18n="dev_contact">Dasturchi bilan bog'lanish</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== DOWNLOAD CTA ==================== -->
+    <section class="download-cta" id="download">
+      <div class="cta-glow-1"></div>
+      <div class="cta-glow-2"></div>
+      <div class="container">
+        <div class="cta-wrapper">
+          <div class="cta-content reveal">
+            <div class="cta-rating">
+              <div class="stars">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star-half-stroke"></i>
+              </div>
+              <strong>4.8</strong>
+              <span data-i18n="cta_rating_label">– 10+ baho</span>
+            </div>
+            <h2 class="cta-title" data-i18n="cta_title">Bugun tayyorlanishni boshlang</h2>
+            <p class="cta-desc" data-i18n="cta_desc">Kuplab o'quvchilar bilan qo'shiling. Bepul yuklab oling.</p>
+            <div class="cta-features">
+              <div class="cta-feat">
+                <i class="fa-solid fa-check"></i>
+                <span data-i18n="cta_free">Bepul</span>
+              </div>
+              <div class="cta-feat">
+                <i class="fa-solid fa-check"></i>
+                <span data-i18n="cta_offline">Offline</span>
+              </div>
+              <div class="cta-feat">
+                <i class="fa-solid fa-check"></i>
+                <span data-i18n="cta_noads">Reklama yo'q</span>
+              </div>
+            </div>
+          </div>
+          <div class="cta-visual reveal">
+            <div class="cta-phone-frame">
+              <div class="cta-phone-screen">
+                <div class="cta-app-icon">
+                  <img src="./public/img/fav.png" alt="AvtoTest Plus" class="cta-logo-img" />
+                </div>
+                <div class="cta-app-name">AvtoTest Plus</div>
+                <div class="cta-stars-mini">⭐⭐⭐⭐⭐</div>
+                <div class="cta-install-btn">
+                  <i class="fa-brands fa-google-play"></i>
+                  <a
+                    href="https://play.google.com/store/apps/details?id=uz.avtotest.plus"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >O'rnatish</a>
+                </div>
+                <div class="cta-dl-info">
+                  <span><i class="fa-solid fa-download"></i> 100+</span>
+                  <span>Bepul</span>
+                </div>
+              </div>
+            </div>
+            <div class="cta-ring cta-ring-1"></div>
+            <div class="cta-ring cta-ring-2"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== FOOTER ==================== -->
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-top">
+          <div class="footer-brand">
+            <a href="#hero" class="nav-logo">
+              <span class="logo-icon">
+                <img src="./public/img/fav.png" alt="AvtoTest Plus Logo" class="logo-img" />
+              </span>
+              <span class="logo-text">AvtoTest <span>Plus</span></span>
+            </a>
+            <p data-i18n="footer_tagline">
+              Haydovchilik imtihoniga tayyorlanishning eng yaxshi yo'li.
+            </p>
+            <div class="footer-social">
+              <a href="https://t.me/azizjon_sheronov" aria-label="Telegram" target="_blank" rel="noopener">
+                <i class="fa-brands fa-telegram"></i>
+              </a>
+              <a href="#" aria-label="Instagram">
+                <i class="fa-brands fa-instagram"></i>
+              </a>
+              <a href="mailto:azizjonsheronov@gmail.com" aria-label="Email">
+                <i class="fa-solid fa-envelope"></i>
+              </a>
+            </div>
+          </div>
+          <div class="footer-links-group">
+            <h4 data-i18n="footer_app">Ilova</h4>
+            <a href="#features" data-i18n="nav_features">Xususiyatlar</a>
+            <a href="#screenshots" data-i18n="nav_screenshots">Galereya</a>
+            <a href="#how-it-works" data-i18n="nav_how">Qanday ishlaydi</a>
+            <a href="#download" data-i18n="nav_download">Yuklab olish</a>
+          </div>
+          <div class="footer-links-group">
+            <h4 data-i18n="footer_support">Yordam</h4>
+            <a href="#about" data-i18n="nav_about">Dasturchi haqida</a>
+            <a href="mailto:azizjonsheronov@gmail.com" data-i18n="footer_contact">Bog'lanish</a>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <p data-i18n="footer_copy">© 2026 AvtoTest Plus. Barcha huquqlar himoyalangan.</p>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Scroll to top -->
+    <button class="scroll-top" id="scrollTop" aria-label="Scroll to top">
+      <i class="fa-solid fa-arrow-up"></i>
+    </button>
+
+    <!-- script.js — o'zgarmagan, avvalgidek ishlaydi -->
+    <!-- <script src="script.js"></script> -->
+     <script type="module" src="script.js"></script>
+
+    <!--
+      React bundle — Vite build qilganda bu src/main.jsx ni
+      bundle qilib shu yerga ulaydi.
+      "npm run dev" da Vite o'zi inject qiladi.
+      "npm run build" dan keyin dist/ papkasiga ko'chib ketadi.
+    -->
+    <script type="module" src="/src/main.jsx"></script>
+
+  </body>
+</html>
