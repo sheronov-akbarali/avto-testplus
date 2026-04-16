@@ -367,7 +367,7 @@ function PhoneFrame() {
             └─────────────────────────────────────────────┘
           */}
           <img
-            src="./public/img/image.png"
+            src="/img/image.png"
             alt="AvtoTest Plus App Screenshot"
             className="hero-phone-screenshot"
           />
