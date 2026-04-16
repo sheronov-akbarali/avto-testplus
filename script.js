@@ -1,7 +1,3 @@
-/* ============================================================
-   AVTOTEST PLUS — script.js
-   Clean, modular, well-structured JavaScript
-   ============================================================ */
 
 "use strict";
 
@@ -148,7 +144,7 @@ const translations = {
     about_title: "Кимлар томонидан яратилган?",
     dev_title: "Android Дастурчи & Flutter Дастурчи",
     dev_bio:
-      "3 йиллик тажрибага эга Android дастурчиси. Бир нечта иловалар яратган ва Google Play'да 100+ юклаб олишга эришган. AvtoTest Plus ўзбек ҳайдовчиликга тайорланаётганлар учун махсус яратилган.",
+      "3 йиллик тажрибага эга мобиль дастурчиси. Google Play’да ва App store да  10K+ аудиторияга эга бир нечта иловалар муаллифи. AvtoTest Plus лойиҳаси О‘zbekистондаги бўлажак ҳайдовчиларнинг ҳайдовчilik гувohnомасни олиш жараённи осонлаштириш ва сифатли таййоргарлик кўришлари учун яратилган.",
     dev_contact: "Дастурчи билан боғланиш",
     cta_rating_label: "– 10+ баҳо",
     cta_title: "Бугун тайёрланишни бошланг",
@@ -226,7 +222,7 @@ const translations = {
     about_title: "Кто создал это приложение?",
     dev_title: "Android Разработчик & Flutter Разработчик",
     dev_bio:
-      "Android-разработчик с 3-летним опытом. Создал несколько приложений и достиг 100+ загрузок в Google Play. AvtoTest Plus создан специально для тех, кто готовится к получению водительских прав в Узбекистане.",
+      "3-летний опыт мобильной разработки. Автор нескольких приложений с аудиторией 10K+ в Google Play и App Store. Проект AvtoTest Plus создан для того, чтобы облегчить процесс получения водительского удостоверения и обеспечить качественную подготовку будущих водителей в Узбекистане.",
     dev_contact: "Связаться с разработчиком",
     cta_rating_label: "– 10+ отзывов",
     cta_title: "Начните подготовку сегодня",
@@ -527,7 +523,8 @@ function initDesktopSlider() {
     const itemStep = ITEM_W + GAP;
 
     // Position of active item center from track start (including left padding)
-    const activeCenterFromTrackStart = trackPad + currentIndex * itemStep + ITEM_W / 2;
+    const activeCenterFromTrackStart =
+      trackPad + currentIndex * itemStep + ITEM_W / 2;
 
     // We want activeCenterFromTrackStart + offset = viewportW / 2
     const offset = viewportW / 2 - activeCenterFromTrackStart;
@@ -537,8 +534,7 @@ function initDesktopSlider() {
     // Button states
     if (prevBtn) prevBtn.style.opacity = currentIndex === 0 ? "0.4" : "1";
     if (nextBtn)
-      nextBtn.style.opacity =
-        currentIndex === items.length - 1 ? "0.4" : "1";
+      nextBtn.style.opacity = currentIndex === items.length - 1 ? "0.4" : "1";
   }
 
   if (prevBtn) {
@@ -715,12 +711,16 @@ function initHeroReveal() {
 
   // Glass cards: switch to continuous levitate after entrance animation ends
   document.querySelectorAll(".glass-card").forEach((card) => {
-    card.addEventListener("animationend", () => {
-      card.style.opacity = "1";
-      card.style.transform = "translateY(0) scale(1)";
-      card.classList.remove("glass-card"); // remove entrance animation class
-      card.classList.add("levitate");
-    }, { once: true });
+    card.addEventListener(
+      "animationend",
+      () => {
+        card.style.opacity = "1";
+        card.style.transform = "translateY(0) scale(1)";
+        card.classList.remove("glass-card"); // remove entrance animation class
+        card.classList.add("levitate");
+      },
+      { once: true },
+    );
   });
 }
 
