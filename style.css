@@ -1276,7 +1276,7 @@ section {
 }
 .slider-viewport {
   overflow: hidden;
-  padding: 60px 0;
+  padding: 80px 0;
 }
 .slider-track {
   display: flex;
@@ -1288,26 +1288,26 @@ section {
 }
 .screenshot-item {
   flex-shrink: 0;
-  width: 200px;
+  width: 220px;
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 16px;
   cursor: pointer;
   transition: all 0.4s var(--ease);
-  opacity: 0.35;
-  transform: scale(0.82);
+  opacity: 0.45;
+  transform: scale(0.85);
   transform-origin: center center;
 }
 .screenshot-item.active {
   opacity: 1;
-  transform: scale(1.12);
+  transform: scale(1.10);
   z-index: 2;
   cursor: default;
 }
 .screenshot-frame {
-  width: 200px;
-  height: 380px;
+  width: 220px;
+  height: 420px;
   background: var(--bg-card);
   border-radius: 28px;
   border: 2px solid var(--border);
@@ -1323,11 +1323,11 @@ section {
     0 0 0 3px var(--primary-light);
 }
 .screenshot-label {
-  font-size: 0.85rem;
+  font-size: 0.88rem;
   font-weight: 600;
   color: var(--text-secondary);
   transition: var(--t);
-  opacity: 0;
+  opacity: 0.6;
 }
 .screenshot-item.active .screenshot-label {
   color: var(--primary);
@@ -1771,8 +1771,8 @@ section {
 .mg-item {
   scroll-snap-align: center;
   flex-shrink: 0;
-  width: calc(100vw - 80px);
-  max-width: 320px;
+  width: calc(100vw - 48px);
+  max-width: 360px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -1780,10 +1780,10 @@ section {
 }
 .mg-screen {
   width: 100%;
-  aspect-ratio: 9 / 16;
+  height: 520px;
   background: var(--bg-card);
   border: 2px solid var(--border);
-  border-radius: 24px;
+  border-radius: 28px;
   overflow: hidden;
   box-shadow: var(--shadow);
   position: relative;
@@ -1930,12 +1930,15 @@ section {
   font-weight: 600;
 }
 .mg-label {
-  font-size: 0.88rem;
+  font-size: 0.92rem;
   font-weight: 700;
   color: var(--text-secondary);
+  opacity: 0.7;
+  transition: var(--t);
 }
 .mg-item.active .mg-label {
   color: var(--primary);
+  opacity: 1;
 }
 
 .mg-indicator {
@@ -2807,4 +2810,85 @@ section {
   object-fit: cover;
   border-radius: 14px;
   display: block;
+}
+
+/* ================================================================
+   ================== GALLERY RESPONSIVE SIZES ====================
+   ================================================================ */
+
+/* Large desktop */
+@media (min-width: 1200px) {
+  .screenshot-frame {
+    width: 240px;
+    height: 460px;
+  }
+  .screenshot-item {
+    width: 240px;
+  }
+}
+
+/* Desktop (1100px+) */
+@media (min-width: 1100px) {
+  .screenshot-frame {
+    width: 230px;
+    height: 440px;
+  }
+  .screenshot-item {
+    width: 230px;
+  }
+}
+
+/* Tablet gallery — slightly smaller */
+@media (max-width: 1099px) and (min-width: 769px) {
+  .screenshot-frame {
+    width: 200px;
+    height: 400px;
+  }
+  .screenshot-item {
+    width: 200px;
+  }
+}
+
+/* Mobile gallery sizes */
+@media (max-width: 768px) {
+  .mg-item {
+    width: calc(100vw - 40px);
+    max-width: 380px;
+  }
+  .mg-screen {
+    height: 500px;
+    border-radius: 26px;
+    border-width: 3px;
+  }
+  .mg-img-screen {
+    border-radius: 26px !important;
+  }
+  .mg-real-img {
+    border-radius: 22px;
+  }
+  .mg-label {
+    font-size: 0.95rem;
+    opacity: 0.8;
+  }
+  .mobile-gallery-scroll {
+    padding: 20px 20px 10px;
+    gap: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .mg-item {
+    width: calc(100vw - 32px);
+    max-width: 340px;
+  }
+  .mg-screen {
+    height: 460px;
+  }
+}
+
+/* Very small screens */
+@media (max-width: 360px) {
+  .mg-screen {
+    height: 420px;
+  }
 }
